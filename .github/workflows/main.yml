@@ -3,7 +3,7 @@ name: Evaluate Ontology with OQuaRE
 on:
   push:
     paths:
-      - 'oquare-metrics/ontologies/imports/*.owl'
+      - 'oquare-metrics/ontologies/imports/doid.owl'
 
 permissions:
   contents: write
