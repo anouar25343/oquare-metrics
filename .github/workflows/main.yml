@@ -2,7 +2,7 @@
 on:
   push:
     paths:
-      - 'oquare-metrics/ontologies/imports/doid.owl' # Déclencher le workflow lorsqu'il y a des modifications sur doid.owl
+      - 'oquare-metrics/ontologies/imports/doid.owl' 
 
 jobs:
   evaluate_ontologies:
