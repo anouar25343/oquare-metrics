@@ -23,5 +23,5 @@ jobs:
         with:
           ontology-folders: 'oquare-metrics/ontologies/imports' # Le dossier où se trouve le fichier doid.owl
           ontology-files: 'doid.owl' # Spécifie le fichier à évaluer
-          contents-folder: 'oquare-metrics/OQuaRE/archives/ontologies/imports' # Le dossier où les résultats seront enregistrés
+          contents-folder: 'oquare-metrics/OQuaRE/archives/ontologies/imports/ontology' # Le dossier où les résultats seront enregistrés
           # Ajoutez les autres options de configuration nécessaires ici
