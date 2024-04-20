@@ -1,12 +1,19 @@
-on: [push]
+name: Evaluate Ontology with OQuaRE
+
+on:
+  push:
+    paths:
+      - 'src/ontologies/*.owl'
+
+permissions:
+  contents: write
 
 jobs:
-  hello_world_job:
+  evaluate_ontologies:
     runs-on: ubuntu-latest
-    name: OQuaRE-metrics-test
+    name: Evaluate ontologies
     steps:
       - uses: actions/checkout@v4
-      # Configuration
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
@@ -14,8 +21,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.9'
-          cache: 'pip'
-      - name: Basic testing
-        uses: ./
+      - name: OQuaRE module
+        uses: tecnomod-um/oquare-metrics@v3.0
         with:
-          ontology-folders: ontologies ontologies/imports
+          ontology-folders: 'src/ontologies'
+          # Spécifiez d'autres options ici si nécessaire
