@@ -1,4 +1,8 @@
-on: [push]
+
+on:
+  push:
+    paths:
+      - 'oquare-metrics/ontologies/imports/doid.owl' # Déclencher le workflow lorsqu'il y a des modifications sur doid.owl
 
 jobs:
   evaluate_ontologies:
@@ -16,5 +20,7 @@ jobs:
       - name: OQuaRE metrics calculation
         uses: anouar25343/oquare-metrics@v3.0
         with:
-          contents-folder: 'oquare-metrics/OQuaRE/archives/ontologies/imports'
-          # Autres options supplémentaires selon les besoins
+          ontology-folders: 'oquare-metrics/ontologies/imports' # Le dossier où se trouve le fichier doid.owl
+          ontology-files: 'doid.owl' # Spécifie le fichier à évaluer
+          contents-folder: 'oquare-metrics/OQuaRE/archives/ontologies/imports' # Le dossier où les résultats seront enregistrés
+          # Ajoutez les autres options de configuration nécessaires ici
