@@ -1,3 +1,4 @@
+name: Evaluate Ontology with OQuaRE
 
 on:
   push:
